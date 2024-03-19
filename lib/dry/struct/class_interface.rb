@@ -246,6 +246,7 @@ module Dry
 
       # @param [Hash{Symbol => Object},Dry::Struct] attributes
       # @raise [Struct::Error] if the given attributes don't conform {#schema}
+      # @return [Dry::Struct]
       def new(attributes = default_attributes, safe = false, &block) # rubocop:disable Style/OptionalBooleanParameter
         if attributes.is_a?(Struct)
           if equal?(attributes.class)
